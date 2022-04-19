@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Contact from "../components/contact/contact";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
-import HomePage from "../components/home/Home";
 import Slider from "../components/home/Slider";
 
-export default function Home() {
+export default function ContactUs() {
 
   const [showDrawer, setDrawer] = useState(false);
 
@@ -15,13 +15,12 @@ export default function Home() {
   return (
     <div className={''}>
 		<Header toggleDrawer={toggleDrawer}/>
-		<HomePage/>
+		<Contact/>
 		<Footer/>
 		<Slider toggleDrawer={toggleDrawer} showDrawer={showDrawer}/>
     </div>
   )
 }
-
 export async function getStaticProps() {
   // const res = await fetch('https://api.github.com/repos/vercel/next.js')
   // const json = await res.json()
